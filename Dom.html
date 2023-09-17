@@ -1,0 +1,33 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class='js-button'>Second Button</button>
+   <script>
+    //document is a built in Object in Javascirpt Which is used to Combine HTML And JAvaScript.It is linked Webpage So 
+    // with the help of document object JavaScript can have more control On Webpage HTML elements
+     // console.log( typeof document.body);  // all Html Element inside Javascript are objects so they have property and methods
+      // like other javascript objects
+      //console.log(document.title); //used to get title of webpage
+      //document.title="Document Object Model";  //used to change the title
+      //console.log(document.body);   //used to get body element of HTML inside Javascript
+      //document.body.innerHTML="hello EveryOne";// used to change the content on webpage
+      //document.body.innerHTML='<button>Changed</button>'//// used to change the content on webpage
+
+      //document.querySelector("button")  //to get specific HTML element inside Javascript 
+      //document.querySelector("button").innerHTML='Ok';  // to change the HTMl text inside button
+      
+      //console.log(document.querySelector('.js-button')); //to get specific HTML element inside Javascript 
+        console.log(typeof document.querySelector('js-button'));// this button is also an object
+        //document.querySelector('.js-button').innerHTML='hiii';    //to change the HTMl text inside button  .js-button is class selector
+
+         const buttonElement=document.querySelector('.js-button'); // Html button is now object inside Javascript so It can be stored inside
+         // a variable
+         console.log(buttonElement);
+   </script>
+  </body>
+</html>

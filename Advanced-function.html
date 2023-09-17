@@ -1,0 +1,74 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced function</title>
+  </head>
+  <body>
+    
+   <script>
+    /*//function are values so we can store it in variable
+    //hosting is not allowed when we store function as value inside variable . Hosting meaning is we can call function before defining  the function
+    //fun();
+    greeting();
+    function greeting(){
+      console.log("hello");
+    }
+   const fun= function greeting(){
+      console.log("hello");
+    }
+    fun();
+    // we can also pass funtion  inside another function while calling function this passing function is called callback funnction
+    function fun1(param){
+      param();
+    }
+    fun1(function callbackFunction()
+    {
+      console.log("hello from callback function");
+    })
+    // object can aslo contain function()
+    const object1={
+      num:2,
+      fun2:function display(){
+        console.log("hello from function inside object");
+      }
+    }
+    object1.fun2();
+    //function without name is called anonymous function
+    const fun3=function (){
+        console.log("hello from anonymous function");
+      }
+      fun3();*/
+
+   /* setTimeout(function(){   // this method provide asynchronous code meaning computer processor never wait for finishing one line to execute other line
+      console.log("set timeout");
+    },3000);
+    console.log("next line");
+    setInterval(function(){   // this method provide asynchronous code meaning computer processor never wait for finishing one line to execute other line
+      console.log("set intervaal");  // it aslo run function again and again after some interval
+    },3000);
+    console.log("next line2");*/
+   /* ['dinner',
+    'lunch',
+  'breakfast'].forEach(function(value,index){
+    if(value==='lunch'){
+      return;
+    }
+    console.log(value,index);
+  })*/
+  const arrowFunction=()=>{
+    console.log('arrow function');
+  };
+  arrowFunction();
+ console.log([4,3,8,-4,9,-7].filter((value,index)=>{
+    if(value>=0){
+      return true;
+    }
+    return false;
+  }));
+ console.log([2,2,5].map((value,index)=>{
+    return value*2;
+  }));
+   </script>
+  </body>
+</html>

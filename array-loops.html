@@ -1,0 +1,55 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array and Loops</title>
+  </head>
+  <body>
+    
+   <script>
+    /*const array=[101,20,30];
+    //console.log(array);
+    //console.log(array[1]);
+    const arr=[true,34,'hello', {name : 'jas'},[12,32]];
+    //console.log(arr);
+   for(let i=0;i<arr.length;i++){
+    console.log(arr[i]);
+   }*/
+   /*array1=[1,2,3];
+   //array2=array1;   //array contains reference so both array1 and array2 have same refernce which point to array [1,2,3]
+   array2=array1.slice();  // slice method copy the value of array rather than reference
+   array2.push(4);
+   console.log(array1);
+   console.log(array2);
+   const [frirstValue, secondValue]= [1,2,3];  // destructing of array
+   console.log(frirstValue, secondValue);
+   for(let i=1;i<=10;i++){
+    if(i==5){
+      continue;
+    }
+    console.log(i);
+    if(i==7){
+      break;
+    }
+   }*/
+   /*let i=1;
+   while(i<=10){
+    if(i==5){
+      i++;    // when we use continue in while loop then we have to manually update the value of i otherwise it will become infinite loop
+      continue;
+    }
+    console.log(i);
+    i++;
+   }*/
+   function doubleArray(array)
+   {
+    doubleArr=[];
+    for(let i=0;i<array.length;i++){
+      doubleArr[i]=array[i]*2;
+    }
+    return doubleArr;
+   }
+   console.log(doubleArray([9,8,6]));
+   </script>
+  </body>
+</html>

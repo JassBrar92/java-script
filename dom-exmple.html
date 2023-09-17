@@ -1,0 +1,41 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM  Projects</title>
+  </head>
+  <body>
+    <button  class="js-subscribe" onclick="subscribeFunction();">
+      Subscribe</button>
+      <p> Amazon Shipping calculator</p>
+      <input placeholder="Cost of Order" class="js-price" onkeydown="keyEventHandler(event)">
+      <button class="js-calculate" onclick="shippingCalculation();">Calculate</button>
+      <p class="js-cost"></p>
+   <script>
+    function subscribeFunction(){
+      const subscribeBtn=document.querySelector('.js-subscribe');
+      if(subscribeBtn.innerText==='Subscribe'){    // innertext property takes text of button without counting any space
+      subscribeBtn.innerHTML="Subscribed";
+      }
+      else{
+        subscribeBtn.innerHTML="Subscribe";
+      }
+    }
+    function keyEventHandler(event){
+      if(event.key==="Enter"){
+        shippingCalculation();
+      }
+
+    }
+    function shippingCalculation(){
+      let price=Number(document.querySelector('.js-price').value);  // input text is string so we have to convert into Number first
+     // console.log(typeof document.querySelector('.js-price').value);
+      if(price<40){
+        price=price+10;
+      }
+      document.querySelector('.js-cost').innerHTML=price;
+    }
+  
+   </script>
+  </body>
+</html>

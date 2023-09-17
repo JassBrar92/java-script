@@ -1,0 +1,76 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM  Projects</title>
+    <style>
+      body{
+        font-family: Arial;
+      }
+       .subscribe-btn{
+        background-color: black;
+        padding: 10px 14px;
+        border: none;
+        width: 100px;
+        height: 35px;
+        border-radius: 20px;
+        color: white;
+        margin-bottom:50px ;
+       }
+       .isSubscribe{
+        background-color: rgb(192, 189, 189);
+        color: black;
+       }
+       .cost{
+        padding: 10px;
+        height: 20px;
+        margin-right: 12px;
+       }
+       .calculate-btn{
+        height: 45px;
+        border: none;
+        background-color: green;
+        color: white;
+        padding: 5px 14px;
+       }
+       
+    </style>
+  </head>
+  <body>
+    <button  class="js-subscribe subscribe-btn" onclick="subscribeFunction();">
+      Subscribe</button>
+      <p> Amazon Shipping calculator</p>
+      <input placeholder="Cost of Order" class="js-price cost" onkeydown="keyEventHandler(event)">
+      <button class="js-calculate calculate-btn" onclick="shippingCalculation();">Calculate</button>
+      <p class="js-cost"></p>
+   <script>
+    function subscribeFunction(){
+      const subscribeBtn=document.querySelector('.js-subscribe');
+      if(subscribeBtn.innerText==='Subscribe'){    // innertext property takes text of button without counting any space
+      subscribeBtn.innerHTML="Subscribed";
+      subscribeBtn.classList.add('isSubscribe');
+      }
+      else{
+        subscribeBtn.innerHTML="Subscribe";
+        subscribeBtn.classList.remove('isSubscribe');
+      }
+    }
+    function keyEventHandler(event){
+      if(event.key==="Enter"){
+        shippingCalculation();
+      }
+
+    }
+    function shippingCalculation(){
+      let price=Number(document.querySelector('.js-price').value);  // input text is string so we have to convert into Number first
+     // console.log(typeof document.querySelector('.js-price').value);
+  
+      if(price<40){
+        price=price+10;
+      }
+      document.querySelector('.js-cost').innerHTML=price;
+    }
+  
+   </script>
+  </body>
+</html>

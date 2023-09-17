@@ -1,0 +1,59 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+   <script>
+    /*object*/
+    let product={
+      name: 'pen',
+      price: 20,
+      rating :{     /* object inside object*/
+        star:4.5,
+        count:97
+      },
+      fun:function function1(){
+        console.log('function inside object')
+      }
+     };
+     console.log(product);
+     console.log(product.price);
+     product.price=25;
+     console.log(product.price);
+     product.fun();
+     let object1={
+       name:'jas'
+     }
+     //objects are  reference
+     let object2=object1;
+     object1.name='sukh';
+     console.log(object1);
+     console.log(object2);
+     let object3={
+      name:'jas'
+     }
+     //object1 and object2 have same reference
+     console.log(object1===object2);
+     //object1 and object3 have different reference although they have same type content
+     console.log(object1===object3);
+     console.log('hello'.length); //auto boxing-- javascript automatically convert string into object
+     let obj4={
+      message:'hello',
+      price:43
+     };
+     //let {message}=obj4;    //destructuring
+      let {message,price}=obj4;   //destructuring
+     console.log(message,price);
+     let obj5={
+      message, //shorthand property when property name and variable name are same example: message=message
+      method(){
+        console.log('shorthand method/function');
+      }
+     }
+     console.log(message);
+     obj5.method();
+   </script>
+  </body>
+</html>
