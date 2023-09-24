@@ -1,0 +1,22 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>factory function</title>
+  </head>
+  <body>
+    <script>
+      //factory function return the object It is used when we want use same object multiple time with different value it helps to reduce duplicancy
+      function createfunction(radius){
+        return {
+          radius : radius,
+          drawCircle(){
+            console.log('draw');
+          }
+        }
+      }
+      const circle=createfunction(1);
+      console.log(circle);
+    </script>
+  </body>
+</html>
