@@ -1,0 +1,31 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cloning Objects</title>
+  </head>
+  <body>
+    <script>
+     const circle={
+     radius: 2,
+     draw(){
+      console.log("draw");
+     }
+     }; 
+     // 1 cloning objects through spread operator
+    // const another={...circle};
+     // 2  clong objects through for in loop
+     /*const another={};
+     for(let key in circle){
+      another[key]=circle[key];
+     }*/
+     // 3 cloning objects through Object.assign()
+     //                          target object
+                     //          may be empty or
+                     //          existing object    sources object
+    // const another=Object.assign(   {}  ,           circle);
+     const another=Object.assign({ color:"red"},      circle);
+     console.log(another);
+    </script>
+  </body>
+</html>
