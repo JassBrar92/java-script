@@ -1,0 +1,28 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>constructor function</title>
+  </head>
+  <body>
+    <script>
+      //constructor function used to  create objects
+      //constructor function return the object It is used when we want use same object multiple time with different value it helps to reduce duplicancy
+      function Circle(radius){
+        // this keyword is reference to empty object which will execute peace of code inside this function
+         this.radius= radius,
+         this.drawCircle= function() {
+            console.log('draw');
+          }
+         }
+         /*
+         new keyword does three thing
+         1. it creates empty object example const x={};
+         2. it point this keyword to empty object 
+         3. it returns the new  object x from constructor function  
+         */
+      const circle=new Circle(1);
+      console.log(circle);
+    </script>
+  </body>
+</html>
