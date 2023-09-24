@@ -1,0 +1,25 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>getter and setter</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName : 'Jas',
+        lastName : 'Brar',
+        get fullName() {
+         return `${person.firstName} ${person.lastName}`;
+        },
+        set fullName(value){
+          const parts=value.split(' '); 
+          person.firstName=parts[0];
+          person.lastName=parts[1];
+        }
+        }
+        person.fullName='Sukh Brar';
+        console.log(person.fullName);
+    </script>
+  </body>
+</html>
