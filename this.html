@@ -1,0 +1,46 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>this keyword</title>
+  </head>
+  <body>
+    <script>
+      //this keyword inside object method reference to current object
+      /*const obj={
+        a:10,
+        show(){
+        console.log(this);
+        }
+      }
+      obj.show();*/
+      //inside normal function this refernce to window object in browser
+      /*function show(){
+        console.log(this);
+      }
+      show();*/
+      // below example callback function inside foreach will behave like normal function so inside callback function  this keyword  will reference to window objects 
+      // although we are using this keyword inside object method show
+     /* const obj={
+        a:"a",
+        arr:['a','b','c'],
+        show(){
+          this.arr.forEach(function(element){
+            console.log(this.a,element);
+          });
+        }
+      }*/
+      //to get value of a property we have to pass second argument this keyword inside foreach loop
+      const obj={
+        a:"a",
+        arr:['a','b','c'],
+        show(){
+          this.arr.forEach(function(element){
+            console.log(this.a,element);
+          },this);
+        }
+      }
+      obj.show();
+    </script>
+  </body>
+</html>
