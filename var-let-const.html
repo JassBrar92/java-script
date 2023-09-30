@@ -1,0 +1,34 @@
+<!-- html code -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>let var const keyword</title>
+  </head>
+  <body>
+    <script>
+   //var scope inside the function 
+  /* function hello(){
+    for(var i=0;i<5;i++){
+      console.log("inside block "+ i);
+    }
+    console.log("inside function "+ i);
+   }
+   hello();*/
+   // let scope inside the block
+   /*function hello(){
+    for(let i=0;i<5;i++){
+      console.log("inside block "+ i);
+    }
+    console.log("inside function "+ i);
+   }
+   hello();*/
+   // const varible are read only. Means you cannot reassign const variable. 
+   function hello(){
+   // const i;    //Declaration must be initialized.   
+   const i=5;
+   i=6;      //Uncaught TypeError: Assignment to constant variable.
+   }
+   hello();
+   </script>
+  </body>
+</html>
